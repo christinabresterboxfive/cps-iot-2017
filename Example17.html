@@ -148,7 +148,7 @@ socket.on('staticMsgToClient', function(msg) { // when we receive the message
 socket.on("clientReadValues", function(value) {
     potValue1 = value.desiredValue;
     potValue2 = value.actualValue;
-    pwm = parseInt((value.pwm).toFixed(0), 10);
+    var pwm = parseInt((value.pwm).toFixed(0), 10);
     // Draw graph *****************************************
     ctx1.clearRect(0, 0, canvas1.width, canvas1.height); // clear the canvas
     ctx1.lineWidth = "2";
